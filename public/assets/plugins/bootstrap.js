@@ -384,8 +384,9 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
           $active.removeClass(['active', direction].join(' '))
           that.sliding = false
           setTimeout(function () { that.$element.trigger('slid.bs.carousel') }, 0)
-        })
-        .emulateTransitionEnd($active.css('transition-duration').slice(0, -1) * 1000)
+        })  
+        // .emulateTransitionEnd(1500)
+        .emulateTransitionEnd($active.css('transition-duration').slice(0, -1) * 2000)
     } else {
       $active.removeClass('active')
       $next.addClass('active')
