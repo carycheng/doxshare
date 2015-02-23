@@ -385,8 +385,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
           that.sliding = false
           setTimeout(function () { that.$element.trigger('slid.bs.carousel') }, 0)
         })  
-        // .emulateTransitionEnd(1500)
-        .emulateTransitionEnd($active.css('transition-duration').slice(0, -1) * 2000)
+        .emulateTransitionEnd(15000)
+        // .emulateTransitionEnd($active.css('transition-duration').slice(0, -1) * 3000)
     } else {
       $active.removeClass('active')
       $next.addClass('active')
