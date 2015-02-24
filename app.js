@@ -38,6 +38,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/auth_confirm', index.box_confirm)
+app.get('/uploadpage', index.uploadpage)
 // Example route
 // app.get('/users', user.list);
 

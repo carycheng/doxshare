@@ -9,6 +9,10 @@ exports.view = function(req, res){
   	res.render('index', projects);
 };
 
+exports.uploadpage = function(req, res){
+  	res.render('uploadpage');
+};
+
 exports.box_confirm = function(req, res){
 	var state = req.query.state;
 	var code = req.query.code;
