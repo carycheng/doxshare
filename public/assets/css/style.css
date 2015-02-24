@@ -345,5 +345,10 @@ border: 1px solid #e1e1e1;
   left: 50%;
 }
 
+.fluidimage{
+  width: 100%;
+  height: 100%;
+}
+
 
    
