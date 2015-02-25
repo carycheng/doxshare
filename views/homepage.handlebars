@@ -47,7 +47,7 @@
          
                         <div class="item active">
                             <div class="carousel-inner">
-                                <img src="assets/img/doxshare1.jpg" alt="" />
+                                <img class="fluidimage" src="assets/img/doxshare1.jpg" alt="" />
 
                             
                                     <a class="btnNewLoan btn-primary" href="#openModal"> NEW LOAN </a>
@@ -71,10 +71,42 @@
                                     <div id="openModal2" class="modalDialog">   
                                         <div>
                                             <a href="#" title="Exit" class="close" data-dismiss="modal">X</a>
-                                            <h2>SELECT TYPE OF LOAN</h2>
-                                                <a id="upload_page" href="/uploadpage">SMALL BUSINESS LOAN</a>
+                                            <h2>TYPE OF LOAN</h2>
+                                                <div class="loanBox">
+                                                    <a href="#openModal3" id="personalinfo">MICROLOAN PROGRAM</a>
+                                                    <li>Used for working capital or the purchase of inventory, machinery or equipment.</li>
+                                                </div>
+
+                                                <a id="upload_page" href="/uploadpage">REAL ESTATE/EQUIPMENT LOANS</a>
+                                                <li>Used for providing long-term fixed rate financing for land and buldings.</li>
+
+                                                <a id="upload_page" href="/uploadpage">DISASTER LOANS</a>
+                                                <li>Used to repair or replace real estate and equipment that were destroyed in disaster.</li>
+
+                                                <a id="upload_page" href="/uploadpage">EQUIPMENT LOANS</a>
+                                                <li>Used for leasing office equipment, machinery, and other tools in increments.</li>
+
+                                                <a id="upload_page" href="/uploadpage">MERCHANT CASH ADVANCE</a>
+                                                <li>Used to advance cash to a business based on the volume of monthly credit card transactions.</li>
+
+                                                <a id="upload_page" href="/uploadpage">LINES OF CREDIT</a>
+                                                <li>Used for working capital loans to provide day-to-day cash flow for a business.</li>
+
+                                                <a id="upload_page" href="/uploadpage">PROFESSIONAL PRACTICE LOANS</a>
+                                                <li>Designated towards professional services: health care, accounting, lefal, and insurance.</li>
+
+                                                <a id="upload_page" href="/uploadpage">FRANCHISE STARTUP LOAN</a>
+                                                <li>Designated to finance entrpreneurs: Open to working capital and franchise fees.</li>
                                         </div>
                                     </div> 
+
+                                    <div id="openModal3" class="modalDialog">
+                                        <div>
+                                            <a href="#" title="Exit" class="close" data-dismiss="modal">X</a>
+                                            <h2>PERSONAL INFO</h2>
+                                            <a id="upload_page" href="/uploadpage">ALL DONE</a>
+                                        </div>
+                                    </div>
                    
                             </div>              
                         </div>
@@ -117,7 +149,7 @@
                                Mountain View, CA  <br />
                                94040
                             </p>
-                    <a href="#" class="btn btn-primary" >SEND QUERY</a>
+                    <a href="#" class="btn btn-primary">SEND QUERY</a>
                 </div>
                </div>
             </div>
@@ -141,10 +173,13 @@
         // $('#upload_page').on("click",function(){
         //       res.render('uploadpage');
         // });
-
-
-  
     </script>
+    <script>
+        $('#personalinfo').on("click",function(){
+            $('#openModal2').modal('hide');
+            $('#openModal3').modal('show');
+        });
+    </script
 
 
 </body>

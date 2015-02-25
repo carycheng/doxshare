@@ -44,8 +44,18 @@
    <!--/.NAVBAR END-->
         
        <section id="home" class="text-center">
-         
+                        <div class="item active">
+                            <div class="carousel-inner">
+                                <img class="fluidimage" src="assets/img/doxshare1.jpg" alt=""/>
 
+                                <form method="post" action="/upload">
+                                    <input type="submit" class="btn btn-primary" value="CREATE NEW FOLDER">
+                                </form>
+<!--                            <a href="#" class="create_folder">CREATE NEW FOLDER</a>
+ -->                   
+                            </div>              
+                        </div>
+            
        </section>
     <!--/.SLIDESHOW END-->
 
@@ -95,7 +105,28 @@
     <!-- BOOTSTRAP SCRIPTS  -->
     <script src="assets/plugins/bootstrap.js"></script>
   <!-- CUSTOM SCRIPTS  -->
-    <script src="assets/js/custom.js"></script>
+    <script type="text/javascript">
+        // $(document).ready(function(){
+        //     console.log('wefwef');
+            
+        //     $("a.create_folder").click(function(){
+        //         $.ajax({
+        //             url: "https://api.box.com/2.0/folders",
+        //             headers: {"Authorization" : "QHWElUnXkWtn7tlnYOYIy92nAZaMFwd3"},
+        //             type: "post",
+        //             data: {
+        //                 'name': 'Test Folder 4', 
+        //                 'parent': {'id':'0'}
+        //             },
+        //             dataType: "json",
+        //             success: function(data){
+        //                 console.log(data);
+        //             }
+        //         })
+        //     })
+        // })
+    </script>
+
 </body>
 </html>
 

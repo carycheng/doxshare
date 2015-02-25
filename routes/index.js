@@ -10,6 +10,7 @@ exports.view = function(req, res){
 };
 
 exports.uploadpage = function(req, res){
+	//box api call, query the folders and try to get the id val
   	res.render('uploadpage');
 };
 
@@ -54,4 +55,23 @@ exports.box_confirm = function(req, res){
 	    }
 	);
 	//exchange the authorization code for an access token from Box.
+}
+
+exports.upload = function(req, res){
+	var token = credentials.token_type + " " + credentials.access_token;
+	console.log("token --->", token);
+	request.post(
+	{	
+		headers: {
+					'content-type': 'text/plain;charset=UTF-8',
+					'Authorization': "Bearer QHWElUnXkWtn7tlnYOYIy92nAZaMFwd3"
+				},
+		url: 'https://api.box.com/2.0/folders',
+	    form: {'name': 'Test Folder 4', 'parent':{'id':'0'}}
+	},
+	function (error, response, body) {
+	    console.log(body);
+	    //render or send call
+	});
+
 }
