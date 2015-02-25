@@ -1,6 +1,7 @@
 var request = require('request');
 var credentials = require("../credentials.json");
 var projects = require("../projects.json");
+var Box = require("nodejs-box");
 /*
  * GET home page.
  */
@@ -60,18 +61,12 @@ exports.box_confirm = function(req, res){
 exports.upload = function(req, res){
 	var token = credentials.token_type + " " + credentials.access_token;
 	console.log("token --->", token);
-	request.post(
-	{	
-		headers: {
-					'content-type': 'text/plain;charset=UTF-8',
-					'Authorization': "Bearer QHWElUnXkWtn7tlnYOYIy92nAZaMFwd3"
-				},
-		url: 'https://api.box.com/2.0/folders',
-	    form: {'name': 'Test Folder 4', 'parent':{'id':'0'}}
-	},
-	function (error, response, body) {
-	    console.log(body);
-	    //render or send call
-	});
+	var box = new Box({
+		access_token: credentials.access_token,
+		refresh_token: credentials.refresh_token
+	})
 
+	box.folders.create("fewfewfscdw", 0, function(result){
+		res.send("fwefwfew");
+	})
 }
