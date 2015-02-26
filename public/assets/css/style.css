@@ -318,7 +318,7 @@ border: 1px solid #e1e1e1;
   padding-top: 5px;
 }
 
-.btnNewLoan{
+/*.btnNewLoan{
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -344,7 +344,35 @@ border: 1px solid #e1e1e1;
   margin: -20px -50px;
   top: 40%;
   left: 50%;
-}
+}*/
+
+.btnNewLoan {
+ display: inline-block;
+ padding: 6px 12px;
+ margin-bottom: 0;
+ font-size: 14px;
+ font-weight: normal;
+ line-height: 1.428571429;
+ text-align: center;
+ white-space: nowrap;
+ vertical-align: middle;
+ cursor: pointer;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ -o-user-select: none;
+ user-select: none;
+ background-image: none;
+ border: 1px solid transparent;
+ border-radius: 4px;
+ position: absolute;
+ z-index: 1;
+ height: 10%;
+ width: 20%;
+ margin: -50px -160px;
+ top: 40%;
+ left: 50%;
+ }
 
 /* RESIZES IMAGES FOR DIFFERENT SIZES OF MONITOR*/
 .fluidimage{

@@ -55,7 +55,7 @@
                                         <div>
                                             <a href="#" id="close" title="Exit" class="close" data-dismiss="modal">X</a>
                                             <h2>SELECT YOUR BANK</h2>
-                                            <a href="#openModal2" id="bankOfAmerica">
+                                            <a href="#openModalBank" id="bankOfAmerica">
                                                 <img src="http://i72.photobucket.com/albums/i162/carycheng77/rsz_bankofamericaimage_zpshszeec9z.jpg"/>
                                             </a>
                                                
@@ -68,6 +68,23 @@
                                                 </div>
                                         </div>
                                     </div>
+
+
+                                    <div id="openModalBank" class="modalDialog">
+                                        <div>
+                                        <a href="#" title="Exit" class="close" data-dismiss="modal">X</a>
+                                        <h2>BANKER CREDENTIALS</h2>
+                                        <a id="auth_banker" href="#openModal2">AUTHENTICATE</a>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+
                                     <div id="openModal2" class="modalDialog">   
                                         <div>
                                             <a href="#" title="Exit" class="close" data-dismiss="modal">X</a>
@@ -167,13 +184,21 @@
     <script>
         $('#bankOfAmerica').on("click",function(){
               $('#openModal').modal('hide');
-              $('#openModal2').modal('show');
+              $('#openModalBank').modal('show');
         });
 
         // $('#upload_page').on("click",function(){
         //       res.render('uploadpage');
         // });
     </script>
+
+    <script>
+        $('#auth_banker').on("click", function(){
+            $('#openModalBank').modal('hide');
+            $('#openModal2').modal('show');
+        });
+    </script>
+
     <script>
         $('#personalinfo').on("click",function(){
             $('#openModal2').modal('hide');

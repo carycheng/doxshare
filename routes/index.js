@@ -66,7 +66,20 @@ exports.upload = function(req, res){
 		refresh_token: credentials.refresh_token
 	})
 
-	box.folders.create("fewfewfscdw", 0, function(result){
-		res.send("fwefwfew");
+	box.folders.create("test file 10", 0, function(result){
+		res.send("test file 10");
+	})
+}
+
+exports.sharedlink = function(req, res){
+	var token = credentials.token_type + " " + credentials.access_token;
+	console.log("token --->", token);
+	var box = new Box({
+		access_token: credentials.access_token,
+		refresh_token: credentials.refresh_token
+	})
+
+	box.folders.createSharedLink("test file 9", "open", function(result){
+		res.send("create link");
 	})
 }
