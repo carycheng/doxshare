@@ -289,8 +289,8 @@ border: 1px solid #e1e1e1;
 }
 
 .modalDialog > div {
-  width: 600px;
-  height: 250px;
+  width: 710px;
+  height: 400px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
@@ -300,7 +300,6 @@ border: 1px solid #e1e1e1;
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
 }
-
 /* NEW LOAN BUTTON */
 
 .loan_button{
@@ -346,6 +345,14 @@ border: 1px solid #e1e1e1;
   left: 50%;
 }*/
 
+.loanBox {
+  border: 50px solid blue;
+}
+
+.largeText{
+  font-size: 230% !important;
+}
+
 .btnNewLoan {
  display: inline-block;
  padding: 6px 12px;
@@ -372,7 +379,244 @@ border: 1px solid #e1e1e1;
  margin: -50px -160px;
  top: 40%;
  left: 50%;
- }
+}
+
+
+#boxWithLogo1 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: -80px -340px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+#boxWithLogo2 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: -80px -167px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+#boxWithLogo3 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: -80px 5px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+#boxWithLogo4 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: -80px 177px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+#boxWithLogo5 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: 75px -340px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+#boxWithLogo6 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: 75px -167px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+#boxWithLogo7 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: 75px 5px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+#boxWithLogo8 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: 75px 177px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+.white {
+  color: white !important;
+}
 
 /* RESIZES IMAGES FOR DIFFERENT SIZES OF MONITOR*/
 .fluidimage{
