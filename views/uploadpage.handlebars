@@ -49,17 +49,31 @@
                                 <img class="fluidimage" src="assets/img/doxshare1.jpg" alt=""/>
 
                                 <form method="post" action="/upload">
+                                    <input type="text" name="folder_name">
                                     <input type="submit" class="btn btn-primary" value="CREATE NEW FOLDER">
-                                </form>
-<!--                            <a href="#" class="create_folder">CREATE NEW FOLDER</a>
- -->                   
+                                </form>      
+
                             </div>              
-                        </div>
+                        </div> 
             
        </section>
     <!--/.SLIDESHOW END-->
 
+    {{#each folders}}
+        <form method="post" action="/sharedlink">
+            {{name}}
+            {{#if shared_link_gen}}
+                <label class='btn btn-danger'>Shared link generated: {{link}}</label> <a href="{{link}}">link</a>
+            {{else}}
+                <label class='btn btn-danger'>No shared link generated</label>
+            {{/if}}
+            <input type="submit" class="btn btn-primary" value="CREATE SHARED LINK" >
+            <input type="hidden" name="id" value={{id}}>
+            <input type="hidden" name="_method" value="PUT">
 
+        </form>               
+
+    {{/each}}
        
 
     

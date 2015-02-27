@@ -1,7 +1,9 @@
 var request = require('request');
 var credentials = require("../credentials.json");
 var projects = require("../projects.json");
+var folders = require("../folders.json");
 var Box = require("nodejs-box");
+var agent = require('superagent');
 /*
  * GET home page.
  */
@@ -12,7 +14,7 @@ exports.view = function(req, res){
 
 exports.uploadpage = function(req, res){
 	//box api call, query the folders and try to get the id val
-  	res.render('uploadpage');
+  	res.render('uploadpage', folders);
 };
 
 exports.box_confirm = function(req, res){
@@ -59,27 +61,72 @@ exports.box_confirm = function(req, res){
 }
 
 exports.upload = function(req, res){
-	var token = credentials.token_type + " " + credentials.access_token;
-	console.log("token --->", token);
-	var box = new Box({
-		access_token: credentials.access_token,
-		refresh_token: credentials.refresh_token
-	})
+	var folder_name = req.body.folder_name;
+	console.log("folder name", folder_name);
 
-	box.folders.create("test file 10", 0, function(result){
-		res.send("test file 10");
-	})
+
+	var token = "Bearer" + " " + credentials.access_token;
+	console.log("token --->", token);
+
+	agent
+    .post("https://api.box.com/2.0/folders/")
+    .set('Authorization', token)
+    .send({"name":folder_name, "parent": {"id": "0"}})
+    .end(function (result) {
+      if (result.error) {
+        
+      }
+	 folders.folders.push({
+		"id" : result.body.id,
+		"name" : result.body.name,
+		"shared_link_gen" : false,
+		"link" : ""
+	 })
+
+      console.log(result.body);
+      res.render("uploadpage", folders);
+    });
+	// var box = new Box({
+	// 	access_token: credentials.access_token,
+	// 	refresh_token: credentials.refresh_token
+	// })
+
+	// box.folders.create("folder_name", 0, function(result){
+	// 	console.log(result);
+	// 	folders.folders.push({
+	// 		"id" : "result.id",
+	// 		"name" : "result.name"
+	// 	})
+	// 	res.render("uploadpage", folders);
+	// })
 }
 
 exports.sharedlink = function(req, res){
-	var token = credentials.token_type + " " + credentials.access_token;
+	var token = "Bearer" + " " + credentials.access_token;
 	console.log("token --->", token);
-	var box = new Box({
-		access_token: credentials.access_token,
-		refresh_token: credentials.refresh_token
-	})
+	var id = req.body.id;
 
-	box.folders.createSharedLink("test file 9", "open", function(result){
-		res.send("create link");
-	})
+	agent
+    .put("https://api.box.com/2.0/folders/" + id)
+    .set('Authorization', token)
+    .send({"shared_link": {"access" : "open"}})
+    .end(function (result) {
+      if (result.error) {
+        
+      }
+      console.log(result.body);
+
+      for (var i = folders.folders.length - 1; i >= 0; i--) {
+      	if(folders.folders[i].id == result.body.id){
+      		folders.folders[i].shared_link_gen = true;
+      		folders.folders[i].link = result.body.shared_link.url;
+      	}
+      };
+
+      res.render("uploadpage", folders);
+    });
+
 }
+
+/*
+*/

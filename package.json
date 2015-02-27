@@ -18,7 +18,8 @@
     "express3-handlebars": "*",
     "mongodb": "*",
     "mongoose": "*",
-    "nodejs-box": "*"
+    "nodejs-box": "*",
+    "superagent": "~0.18.0"
   },
   "engines": {
     "node": "0.10.x"

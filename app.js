@@ -40,6 +40,7 @@ app.get('/', index.view);
 app.get('/auth_confirm', index.box_confirm)
 app.get('/uploadpage', index.uploadpage)
 app.post('/upload', index.upload)
+app.put("/sharedlink", index.sharedlink)
 // Example route
 // app.get('/users', user.list);
 
