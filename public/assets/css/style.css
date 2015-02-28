@@ -12,7 +12,14 @@
 /* =============================================================
    GENERAL STYLES
  ============================================================ */
+
+
+html {
+  height: 100%;
+}
+
 body {
+    min-height: 100%;
     font-family: 'Open Sans', sans-serif;
    
 }
@@ -38,7 +45,7 @@ p {
     padding-bottom:40px;
 }
 .pad-bottom {
-    padding-bottom:10%;
+    padding-bottom:18%;
 }
 
 /* NAVBAR STYLE */
@@ -54,11 +61,6 @@ color: #FFF;
 
 
 /* ADDED PADDING IN NAVBAR */
-
-html {
-  height: 100%;
-}
-
 .navbar {
     padding:15px;
      -webkit-transition: background .8s ease-out,padding .8s ease-out;

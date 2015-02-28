@@ -88,19 +88,20 @@
                                             <form method="post" action="/sharedlink">
                                                 {{name}}
                                                 {{#if shared_link_gen}}
-                                                    <label class='btn btn-danger'>Shared link generated: {{link}}</label> 
-                                                    <a type="btn btn-primary" href="{{link}}">ACCESS FOLDER</a>
+                                                    <input type="text" value={{link}}>
+<!--                                                     <label class='btn btn-danger'>Shared link generated: {{link}}</label> 
+ -->                                                    <a type="btn btn-primary" href="{{link}}">ACCESS FOLDER</a>
                                                     
                                                 {{else}}
                                                     <label class='btn btn-danger'>No shared link generated</label>
                                                     <script type="text/javascript">
-                                                        document.getElementById('createButton').style.visibility='hidden';
+                                                        // document.getElementById('createButton').style.visibility='hidden';
                                                     </script>
                                                 {{/if}}
                                                 <input id="createButton" type="submit" class="btn btn-primary" value="CREATE SHARED LINK" >
                                                 <input type="hidden" name="id" value={{id}}>
                                                 <input type="hidden" name="_method" value="PUT">
-                                            </form>               
+                                            </form><br>             
                                             {{/each}}
                                         </div>
 
@@ -114,23 +115,23 @@
                                         <div class="alert alert-info2">
                                             <div class="form">
                                                 <label class="control-label">Required Dox Checklist</label>
-                                                <label class="radio">
-                                                    <input value="1" type="radio">Business Plan
+                                                <label class="checkbox">
+                                                    <input value="1" type="checkbox">Business Plan
                                                 </label>
-                                                <label class="radio">
-                                                    <input value="2" type="radio">Personal Credit Report
+                                                <label class="checkbox">
+                                                    <input value="2" type="checkbox">Personal Credit Report
                                                 </label>
-                                                <label class="radio">
-                                                    <input value="3" type="radio">Business Credit Report
+                                                <label class="checkbox">
+                                                    <input value="3" type="checkbox">Business Credit Report
                                                 </label>
-                                                <label class="radio">
-                                                    <input value="4" type="radio">Financial Statements
+                                                <label class="checkbox">
+                                                    <input value="4" type="checkbox">Financial Statements
                                                 </label>
-                                                <label class="radio">
-                                                    <input value="5" type="radio">Income Tax Returns
+                                                <label class="checkbox">
+                                                    <input value="5" type="checkbox">Income Tax Returns
                                                 </label>
-                                                <label class="radio">
-                                                    <input value="6" type="radio">Commercial Leases
+                                                <label class="checkbox">
+                                                    <input value="6" type="checkbox">Commercial Leases
                                                 </label>
                                             </div>
                                         </div>
