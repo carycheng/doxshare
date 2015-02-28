@@ -55,6 +55,9 @@ color: #FFF;
 
 /* ADDED PADDING IN NAVBAR */
 
+html {
+  height: 100%;
+}
 
 .navbar {
     padding:15px;
