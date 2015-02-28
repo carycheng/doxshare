@@ -45,6 +45,10 @@ p {
     padding-bottom:40px;
 }
 .pad-bottom {
+    padding-bottom:5%;
+}
+
+.pad-bottom-upload {
     padding-bottom:18%;
 }
 
