@@ -17,6 +17,11 @@ exports.uploadpage = function(req, res){
   	res.render('uploadpage', folders);
 };
 
+exports.homepage = function(req, res){
+	//box api call, query the folders and try to get the id val
+  	res.render('homepage');
+};
+
 exports.box_confirm = function(req, res){
 	var state = req.query.state;
 	var code = req.query.code;
@@ -42,7 +47,7 @@ exports.box_confirm = function(req, res){
 	           var token_type = body_obj["token_type"];
 	           var refresh_token = body_obj["refresh_token"];
 
-	           console.log(token);
+	           // console.log(token);
 	           //....
 	           credentials.access_token = token;
 	           credentials.expires_in = expires;
@@ -51,7 +56,7 @@ exports.box_confirm = function(req, res){
 	           credentials.refresh_token = refresh_token;
 	           //update json
 
-	           console.log(credentials);
+	           // console.log(credentials);
 
 	           res.render("homepage")
 	        }

@@ -39,6 +39,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/auth_confirm', index.box_confirm)
 app.get('/uploadpage', index.uploadpage)
+app.get('/homepage', index.homepage)
 app.post('/upload', index.upload)
 app.put("/sharedlink", index.sharedlink)
 // Example route
