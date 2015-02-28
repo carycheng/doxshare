@@ -33,9 +33,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                     <li><a href="services.html">MY LOANS</a></li>
-                     <li><a href="pricing.html">ACCOUNT</a></li>
-                      <li><a href="https://doxshare.herokuapp.com">LOGOUT</a></li>
+                     <li><a href="/uploadpage">ACCOUNT MANAGER</a></li>
+                     <li><a href="pricing.html">SETTINGS</a></li>
+                     <li><a href="https://doxshare.herokuapp.com">LOGOUT</a></li>
                 </ul>
             </div>
            
@@ -49,15 +49,14 @@
                             <div class="carousel-inner">
                                 <img class="fluidimage" src="assets/img/doxshare1.jpg" alt="" />
                             
-                                    <a class="btnNewLoan btn-primary largeText" href="#openModal"> New Loan </a>
+                                    <a class="btnNewLoan btn-primary largeText" href="#openModal"> NEW LOAN </a>
                                     <div id="openModal" class="modalDialog">
                                         <div>
                                             <a href="#" id="close" title="Exit" class="close" data-dismiss="modal">X</a>
                                             <h2>SELECT YOUR BANK</h2>
-                                            <a href="#openModalBank" id="bankOfAmerica">
+                                            <a href="#openModal2" id="bankOfAmerica">
                                                 <img src="http://i72.photobucket.com/albums/i162/carycheng77/rsz_bankofamericaimage_zpshszeec9z.jpg"/>
                                             </a>
-                                               
                                                 <img src="http://i72.photobucket.com/albums/i162/carycheng77/rsz_chaselogoimage_2_zpsra0pgrxb.jpg"/>
                                                 <img src="http://i72.photobucket.com/albums/i162/carycheng77/rsz_unionbank_2_zps24ehu7yc.jpg"/>
                                                 <div class="bank_image_location">
@@ -82,9 +81,9 @@
                                     <div id="openModal2" class="modalDialog">   
                                         <div>
                                             <a href="#" title="Exit" class="close" data-dismiss="modal">X</a>
-                                            <h2>TYPE OF LOAN</h2>
+                                            <h2>LOAN TYPE</h2>
                                                 <div id="boxWithLogo1" class="btn-primary">
-                                                    <a href="#openModal3" class="white" id="personalinfo">MICROLOAN <br> PROGRAM</a>
+                                                    <a id="upload_page" class="white" href="#openModal3">MICROLOAN <br> PROGRAM</a>
                                                 </div>
                                                 <div id="boxWithLogo2" class="btn-primary">
                                                     <a id="upload_page" class="white" href="/uploadpage">REAL ESTATE/<br>EQUIPMENT LOANS</a>
@@ -117,23 +116,38 @@
                                             
                                             <div>
                                                 <div class="form-group" style="float:left;">
-                                                    <label for="usr">first:</label>
+                                                    <label class="firstnamepadding" for="usr">first:</label>
                                                     <input type="text" class="form-control" id="usr">
                                                 </div>
 
                                                 <div class="form-group" style="float:left;">
-                                                    <label for="middle">m:</label>
+                                                    <label class="middlenamepadding" for="middle">m:</label>
                                                     <input type="text" class="form-control-middle" id="middle">
                                                 </div>
                                                 
                                                 <div class="form-group">
-                                                    <label for="pwd">last:</label>
-                                                    <input type="password" class="form-control foo" id="pwd">
+                                                    <label class="lastnamepadding" for="last">last:</label>
+                                                    <input type="text" class="form-control foo" id="last">
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="pwd">email:</label>
-                                                    <input type="password" class="form-control" id="pwd">
+                                                    <label class="emailpadding" for="email">email:</label>
+                                                    <input type="text" class="form-control" id="email">
+                                                </div>
+
+                                                <div class="form-group" style="float:left">
+                                                    <label class="dobpadding" for="dob">DOB:</label>
+                                                    <input type="text" class="form-control" id="dob">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="ssnpadding" for="ssn">SSN:</label>
+                                                    <input type="text" class="form-control" id="ssn">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="accountnopadding" for="accountno">account no#:</label>
+                                                    <input type="password" class="form-control" id="accountno">
                                                 </div>
                                              
                                                 <a class="btn btn-primary" id="upload_page" href="/uploadpage">SUBMIT</a>
@@ -145,17 +159,12 @@
                                     </div>
                    
                             </div>              
-                        </div>
-
-           
+                        </div> 
        </section>
     <!--/.SLIDESHOW END-->
 
-
-       
-
-    
-     <!--/.CLIENTS END-->
+   
+    <!--/.CLIENTS END-->
     <section id="footer-sec" >
              
             <div class="container">
@@ -179,7 +188,7 @@
                    </p>
                 </div>
                <div class="col-md-4">
-                   <h4> <strong>MY LOCATION</strong> </h4>
+                   <h4> <strong>OUR LOCATION</strong> </h4>
                             <p>
                                418 Martens Avenue,  <br />
                                Mountain View, CA  <br />
@@ -203,23 +212,14 @@
     <script>
         $('#bankOfAmerica').on("click",function(){
               $('#openModal').modal('hide');
-              $('#openModalBank').modal('show');
+              $('#openModal2').modal('show');
         });
 
-        // $('#upload_page').on("click",function(){
-        //       res.render('uploadpage');
-        // });
     </script>
 
-    <script>
-        $('#auth_banker').on("click", function(){
-            $('#openModalBank').modal('hide');
-            $('#openModal2').modal('show');
-        });
-    </script>
 
     <script>
-        $('#personalinfo').on("click",function(){
+        $('#upload_page').on("click",function(){
             $('#openModal2').modal('hide');
             $('#openModal3').modal('show');
         });

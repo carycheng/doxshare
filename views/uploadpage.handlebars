@@ -33,9 +33,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="services.html">SERVICES</a></li>                  
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="https://www.box.com/api/oauth2/authorize?response_type=code&client_id=naun3qp90dnkza4sgnysm4vw3i11qfdl&state=aaaaaaaa">LOGIN</a></li>
+                    <li><a href="/homepage">NEW LOAN</a></li>                  
+                    <li><a href="contact.html">SETTINGS</a></li>
+                    <li><a href="https://doxshare.herokuapp.com">LOGOUT</a></li>
+
                 </ul>
             </div>
            
@@ -46,12 +47,96 @@
        <section id="home" class="text-center">
                         <div class="item active">
                             <div class="carousel-inner">
-                                <img class="fluidimage" src="assets/img/doxshare1.jpg" alt=""/>
+                                <!-- <img class="fluidimage" src="assets/img/doxshare1.jpg" alt=""/> -->
+                                    <div id="primary">
+                                        <!-- <p>Primary Sidebar</p> -->
+                                        <div id="leftsidepadding">
+                                            <form method="post" action="/upload">
+                                                <input type="text" name="folder_name">
+                                                <input id="createpadding" type="submit" class="btn btn-primary" value="CREATE NEW FOLDER">
+                                            </form>  
+                                        </div>
+                                        
+                                        <div id="uploadpadding">
+                                            <input type="submit" class="btn btn-primary" value="UPLOAD">
+                                        </div>
+                                        
+                                        <!-- Split button -->
+                                        <div id="uploadpadding">
+                                        <div class="btn-group" id="btn-dropdown">
+                                          <button type="button" class="btn btn-default" id="btn-dropdown">Clients</button>
+                                          <button type="button" class="btn btn-default dropdown-toggle" id="btn-dropdown" data-toggle="dropdown" aria-expanded="false">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                          </button>
+                                          <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Jane Cheng</a></li>
+                                            <li><a href="#">Cary M. Cheng</a></li>
+                                            <li><a href="#">Matt Damon</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Delete Client</a></li>
+                                          </ul>
+                                        </div>
+                                        </div>
+                                       
+                                    </div>
+                                    
+                                    <div id="content">
+                                        <div id="middlepadding">
+                                            <h3>Share Folder</h3>
+                                            {{#each folders}}
+                                            <form method="post" action="/sharedlink">
+                                                {{name}}
+                                                {{#if shared_link_gen}}
+                                                    <label class='btn btn-danger'>Shared link generated: {{link}}</label> 
+                                                    <a type="btn btn-primary" href="{{link}}">ACCESS FOLDER</a>
+                                                    
+                                                {{else}}
+                                                    <label class='btn btn-danger'>No shared link generated</label>
+                                                    <script type="text/javascript">
+                                                        document.getElementById('createButton').style.visibility='hidden';
+                                                    </script>
+                                                {{/if}}
+                                                <input id="createButton" type="submit" class="btn btn-primary" value="CREATE SHARED LINK" >
+                                                <input type="hidden" name="id" value={{id}}>
+                                                <input type="hidden" name="_method" value="PUT">
+                                            </form>               
+                                            {{/each}}
+                                        </div>
 
-                                <form method="post" action="/upload">
-                                    <input type="text" name="folder_name">
-                                    <input type="submit" class="btn btn-primary" value="CREATE NEW FOLDER">
-                                </form>      
+                                    </div>
+                                    
+                                    <div id="secondary">
+
+                                        <div id="rightpadding">
+                                                                                <!-- <h4>
+                                            Result of the class form</h4> -->
+                                        <div class="alert alert-info2">
+                                            <div class="form">
+                                                <label class="control-label">Required Dox Checklist</label>
+                                                <label class="radio">
+                                                    <input value="1" type="radio">Business Plan
+                                                </label>
+                                                <label class="radio">
+                                                    <input value="2" type="radio">Personal Credit Report
+                                                </label>
+                                                <label class="radio">
+                                                    <input value="3" type="radio">Business Credit Report
+                                                </label>
+                                                <label class="radio">
+                                                    <input value="4" type="radio">Financial Statements
+                                                </label>
+                                                <label class="radio">
+                                                    <input value="5" type="radio">Income Tax Returns
+                                                </label>
+                                                <label class="radio">
+                                                    <input value="6" type="radio">Commercial Leases
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="submit" class="btn btn-primary" value="UPDATE">
+                                    </div>
+                                        </div>
 
                             </div>              
                         </div> 
@@ -59,7 +144,7 @@
        </section>
     <!--/.SLIDESHOW END-->
 
-    {{#each folders}}
+<!--     {{#each folders}}
         <form method="post" action="/sharedlink">
             {{name}}
             {{#if shared_link_gen}}
@@ -73,7 +158,7 @@
 
         </form>               
 
-    {{/each}}
+    {{/each}} -->
        
 
     
@@ -101,7 +186,7 @@
                    </p>
                 </div>
                <div class="col-md-4">
-                   <h4> <strong>MY LOCATION</strong> </h4>
+                   <h4> <strong>OUR LOCATION</strong> </h4>
                             <p>
                                418 Martens Avenue,  <br />
                                Mountain View, CA  <br />

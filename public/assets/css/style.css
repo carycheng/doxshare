@@ -614,6 +614,10 @@ border: 1px solid #e1e1e1;
   word-wrap: break-word;
 }
 
+/*#wordCenteringBox{
+  padding-top: 30%;
+}
+*/
 .white {
   color: white !important;
 }
@@ -673,6 +677,148 @@ textarea.form-control-middle {
 input[type="date"] {
   line-height: 34px;
 }
+
+#uploadButton {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100000000;
+  height: 35%;
+  width: 23%;
+  margin: 75px 177px;
+  top: 40%;
+  left: 50%;
+  word-wrap: break-word;
+}
+
+
+/*CSS FOR SEPARATING INTO THREE COLUMNS*/
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#primary {
+    float: left;
+    width: 240px;
+    height: 500px;
+}
+
+#content {
+    float: left;
+    width: 800px;
+    height: 500px
+}
+
+#secondary {
+    float: left;
+    width: 350px;
+    height: 500px
+    background-color:#428bca;
+}
+
+#footer {
+    clear: both;
+}
+
+/*UPLOAD BUTTON PADDING*/
+#uploadpadding{
+  margin-top: 30px; 
+}
+
+/*CREATE FOLDER BUTTON PADDING*/
+#createpadding{
+  margin-top: 8px;
+}
+
+/*BUTTON COLORING FOR DROPDOWN*/
+#btn-dropdown {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+/*TOP PADDING FOR COLUMNS*/
+#leftsidepadding{
+  margin-top: 80px;
+}
+
+/*TOP PADDING FOR MIDDLE COLUMN*/
+#middlepadding{
+  margin-top: 50px;
+}
+
+/*TOP PADDING FOR RIGHT COLUMN*/
+#rightpadding{
+  margin-top: 65px;
+}
+
+/*CHECKLIST COLOR STYLING*/
+.alert-info2 {
+ 4475    color: #31708f;
+ 4476    background-color: #FFF;
+ 4477    border-color: #FFF;
+ 4478  
+}
+
+.alert {
+     padding: 15px;
+     margin-bottom: 10px;
+ 
+     border-radius: 4px;
+}
+
+/*PADDING FOR CLIENT INFO MODAL*/
+.firstnamepadding{
+  padding-right: 100px;
+}
+
+.middlenamepadding{
+  padding-right: 20px;
+}
+
+.lastnamepadding{
+  padding-right: 415px;
+}
+
+.dobpadding{
+  padding-right: 100px;
+}
+
+.emailpadding{
+  padding-right: 615px;
+}
+
+.ssnpadding{
+  padding-right: 470px;
+}
+
+.accountnopadding{
+  padding-right: 570px;
+}
+
+/*BOTTOM PADDING FOR FOLDERS*/
+.folderbadding{
+  padding-top: 20px;
+}
+
+
 
 
 
