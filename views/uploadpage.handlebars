@@ -86,11 +86,11 @@
                                             <h3>Share Folder</h3>
                                             {{#each folders}}
                                             <form method="post" action="/sharedlink">
-                                                {{name}}
+                                                <!-- {{name}} -->
                                                 {{#if shared_link_gen}}
                                                     <input type="text" value={{link}}>
-<!--                                                     <label class='btn btn-danger'>Shared link generated: {{link}}</label> 
- -->                                                    <a type="btn btn-primary" href="{{link}}">ACCESS FOLDER</a>
+                                                    <label class='btn btn-danger'>Shared link generated: {{link}}</label> 
+                                                    <a type="btn btn-primary" href="{{link}}">ACCESS FOLDER</a>
                                                     
                                                 {{else}}
                                                     <label class='btn btn-danger'>No shared link generated</label>
@@ -107,6 +107,7 @@
 
                                     </div>
                                     
+                                    <!-- RIGHT MOST COLUMN TO DISPLAY CHECKLIST -->
                                     <div id="secondary">
 
                                         <div id="rightpadding">
