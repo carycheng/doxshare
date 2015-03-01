@@ -725,19 +725,19 @@ input[type="date"] {
 
 #primary {
     float: left;
-    width: 240px;
+    width: 25%;
     height: 500px;
 }
 
 #content {
     float: left;
-    width: 800px;
+    width: 50%;
     height: 500px
 }
 
 #secondary {
     float: left;
-    width: 350px;
+    width: 25%;
     height: 500px
     background-color:#428bca;
 }
