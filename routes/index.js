@@ -114,7 +114,7 @@ exports.sharedlink = function(req, res){
 	agent
     .put("https://api.box.com/2.0/folders/" + id)
     .set('Authorization', token)
-    .send({"shared_link": {"access" : "open"}})
+    .send({"shared_link": {"access" : "collaborators"}})
     .end(function (result) {
       if (result.error) {
         
@@ -130,8 +130,19 @@ exports.sharedlink = function(req, res){
 
       res.render("uploadpage", folders);
     });
-
 }
+
+// exports.collaborators = functon(req, res){
+// 	var token = "Bearer" + " " + credentials.access_token;
+
+// 	agent
+// 	.post("https://api.box.com/2.0/collaborations/")
+// 	.set('Authorization', token)
+// 	.send({"item": { "id": "FOLDER_ID", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"})
+// 	.end(function(result)){
+
+// 	}
+// }
 
 /*
 */
